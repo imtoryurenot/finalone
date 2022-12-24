@@ -31,3 +31,15 @@ string[] ParseArray(string[] arrayOrigin) // метод перебирает м�
     } 
     return arrayTemp; 
 } 
+ 
+void Main()
+{ 
+    System.Console.Clear(); 
+    string[] arrayOrigin = new string[] {"1234","1567","-2","computer science"}; 
+    PrintArray(arrayOrigin, "Original array is:  "); 
+    string[] arrayNew = ParseArray(arrayOrigin); 
+    PrintArray(arrayNew, "Array according to conditions of the task: "); 
+    System.Console.WriteLine(); 
+} 
+ 
+Main();

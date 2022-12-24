@@ -18,3 +18,16 @@ void PrintArray(string[] array, string message) // метод для вывод�
     System.Console.WriteLine(result.TrimEnd(' ', ',')); // убираем разделители 
 } 
  
+string[] ParseArray(string[] arrayOrigin) // метод перебирает массив и создаёт новый учитывая требования задачи  
+{ 
+    string[] arrayTemp = new string[0]; 
+    for (int i = 0; i < arrayOrigin.Length; i++) 
+    { 
+        if (arrayOrigin[i].Length <= 3) // проверка 
+        { 
+            Array.Resize(ref arrayTemp, arrayTemp.Length + 1); // увеличиваем размер финального массива 
+            arrayTemp[arrayTemp.Length - 1] = arrayOrigin[i]; 
+        } 
+    } 
+    return arrayTemp; 
+} 
